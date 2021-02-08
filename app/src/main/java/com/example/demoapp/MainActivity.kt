@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
             Log.i("aa", mediaClip.cacheImagePath + "")
         }
         Log.e(TAG , "Google : ${getGoogle()}")
+	val rangeTest = KtRange() 
+	rangeTest.range1() 
+	rangTest
     }
 
     private val arrayWrapper = ArrayWrapper()
@@ -52,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun getGoogle(): ArrayList<String> {
+   private fun getGoogle(): ArrayList<String> {
         return arrayListOf<String>().apply{
             arrayWrapper.array.filter {
                 it.value.isNotEmpty()
