@@ -29,14 +29,17 @@ class MainActivity : AppCompatActivity() {
         if (mediaClip.hasEffect) {
             Log.i("aa", mediaClip.cacheImagePath + "")
         }
-        Log.e(TAG , "Google : ${getGoogle()}")
-	val rangeTest = KtRange() 
-	rangeTest.range1() 
-	rangTest
+        Log.e(TAG, "Google : ${getGoogle()}")
+        val rangeTest = KtRange()
+        rangeTest.range1()
+        routine1()
+        routine2()
+        Log.e("KtCoroutine" , "onCreate finished  ")
     }
 
     private val arrayWrapper = ArrayWrapper()
-    init{
+
+    init {
 
         arrayWrapper.array.add(ListItem().apply {
             value.add("Google1")
@@ -55,8 +58,8 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-   private fun getGoogle(): ArrayList<String> {
-        return arrayListOf<String>().apply{
+    private fun getGoogle(): ArrayList<String> {
+        return arrayListOf<String>().apply {
             arrayWrapper.array.filter {
                 it.value.isNotEmpty()
             }.map { listItem ->
@@ -70,12 +73,12 @@ class MainActivity : AppCompatActivity() {
 
 
     private class ArrayWrapper {
-        var array :ArrayList<ListItem> = arrayListOf()
+        var array: ArrayList<ListItem> = arrayListOf()
     }
 
 
-    private class ListItem{
-        var value : ArrayList<String> = arrayListOf()
+    private class ListItem {
+        var value: ArrayList<String> = arrayListOf()
     }
 
 }
