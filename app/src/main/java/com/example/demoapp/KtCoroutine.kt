@@ -27,5 +27,8 @@ fun routine2(){
         job.join()
     }
     Log.e(TAG , "routine2 , launch3 ")
+}
+
+fun routine3(){
 
 }
